@@ -61,6 +61,7 @@ void Algorithm(int m)
 {
 	clear;
 	switch (m) {
+
 	default: return;
 	}
 }

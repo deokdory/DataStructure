@@ -3,6 +3,8 @@
 #include <iostream>
 #include <Windows.h>
 
+typedef int DataType;
+
 #define cout std::cout
 #define cin std::cin
 #define endl std::endl
