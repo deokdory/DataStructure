@@ -1,89 +1,94 @@
 #include "pch.h"
-#include "LinkedList.h"
+#include "DoubleLinkedList.h"
 
 // static 멤버 변수 초기화
-int LLN::Length = 0;
-LLN* LLN::Head = nullptr;
-LLN* LLN::Tail = nullptr;
+int DLLN::Length = 0;
+DLLN* DLLN::Head = nullptr;
+DLLN* DLLN::Tail = nullptr;
 
 void LinkedList() {
 	// 생성 및 푸시
-	LLN* node = nullptr;
+	DLLN* node = nullptr;
 
 	for (int i = 0; i < 5; i++)
 	{
-		node = LLN::Create(i);		// 0 ~ 4 까지 값을 가진 노드를 생성
+		node = DLLN::Create(i);		// 0 ~ 4 까지 값을 가진 노드를 생성
 		node->Push();				// 만들어진 순서에 따라서 리스트에 푸쉬
-	}				
+	}
 	// 현재 리스트
 	// 0 -> 1 -> 2 -> 3 -> 4
 
-	LLN_Print();
+	DLLN_Print();
 	cout << endl;
 
 	cout << "================================================" << endl;
 
 	// 중간 값 삽입, 맨 앞에 값 삽입
-	LLN* new_node = LLN::Create(100);		// 새로운 노드 생성
-	LLN::Insert(LLN::GetNode(2), new_node);	// 인덱스 2번 뒤에 새로운 노드를 삽입
+	DLLN* new_node = DLLN::Create(100);		// 새로운 노드 생성
+	new_node->Insert(DLLN::GetNode(2));	// 인덱스 2번 뒤에 새로운 노드를 삽입
 
-	LLN* forward_node = LLN::Create(13223);	// 새로운 노드 생성
+	DLLN* forward_node = DLLN::Create(13223);	// 새로운 노드 생성
 	forward_node->InsertHead();				// 맨 앞에 노드 삽입
 
-	LLN_Print();
+	DLLN_Print();
 
 	cout << endl;
 
 	cout << "================================================" << endl;
 
 	// 중간 값 제거
-	LLN::GetNode(3)->Remove();
-	LLN_Print();
+	DLLN::GetNode(3)->Remove();
+	DLLN_Print();
 
 	cout << "================================================" << endl;
 
 	// 특정 인덱스부터 끝까지의 리스트 길이
-	int count = LLN::GetNodeCount(1);
+	int count = DLLN::GetNodeCount(1);
 	cout << "index[1] ~ Tail Length : " << count << endl;
 
 	cout << "================================================" << endl;
 
 	// 모든 값 제거
-	LLN::RemoveAll();
-	LLN_Print();
+	DLLN::RemoveAll();
+	DLLN_Print();
 
 	cout << "================================================" << endl;
 
 	pause;
 }
 
-LLN* LLN::Create(DataType data)
+DLLN* DLLN::Create(DataType data)
 {
-	LLN* node = new LLN;
+	DLLN* node = new DLLN;
 
 	node->data = data;
 	node->Next = nullptr;
-	
+	node->Prev = nullptr;
+
 	return node;
 }
 
-void LLN::Insert(LLN* cur, LLN* new_node)	// cur 다음 인덱스에 들어오게 됨
+void DLLN::Insert(DLLN* cur)	// cur 다음 인덱스에 들어오게 됨
 {
-	new_node->Next = cur->Next;				// 새로운 노드의 다음 노드를 기존 위치에 있던 노드의 다음으로 설정
-	cur->Next = new_node;					// 원래 노드의 다음 노드를 새로운 노드로 설정
+	this->Next = cur->Next;				// 새로운 노드의 다음 노드를 기존 위치에 있던 노드의 다음으로 설정
+	this->Prev = cur;
+
+	cur->Next = this;					// 원래 노드의 다음 노드를 새로운 노드로 설정
 
 	++Length;								// 길이 1 증가
 }
 
-void LLN::InsertHead()
+void DLLN::InsertHead()
 {
 	this->Next = Head;		// 새로운 노드가 (전)머리를 가리키게 함
+	Head->Prev = this;
+
 	Head = this;			// 새로운 노드를 (현)머리로 설정
 
 	++Length;				// 길이 1 증가
 }
 
-void LLN::Push()
+void DLLN::Push()
 {
 	if (Head == nullptr)	// 리스트에 아무 값도 없으면
 	{
@@ -93,16 +98,17 @@ void LLN::Push()
 	else					// 리스트에 값이 하나라도 존재
 	{
 		Tail->Next = this;	// 이전 리스트 마지막 노드의 다음 노드를 이 노드로 설정
+		this->Prev = Tail;
 		Tail = this;		// 리스트의 꼬리를 이 노드로 설정
 	}
 	++Length;				// 길이 + 1
 }
 
-LLN* LLN::GetNode(int index)
+DLLN* DLLN::GetNode(int index)
 {
 	if (Head == nullptr) return nullptr;	// 리스트가 존재하지 않음
-		
-	LLN* find = Head;						// Linked List는 원하는 인덱스에 있는 값을 찾기 위해
+
+	DLLN* find = Head;						// Linked List는 원하는 인덱스에 있는 값을 찾기 위해
 											// 처음(Head)부터 모든 노드를 뒤져야 함
 
 	while (find != nullptr && --index >= 0) // find 포인터가 nullptr 아니어야 하고, 인덱스가 0이 될 때까지 들어가야 함
@@ -111,9 +117,9 @@ LLN* LLN::GetNode(int index)
 	return find;
 }
 
-int LLN::GetNodeCount(int index)
+int DLLN::GetNodeCount(int index)
 {
-	LLN* cur = GetNode(index);
+	DLLN* cur = GetNode(index);
 	if (cur == nullptr) {
 		return -1;
 	}
@@ -125,39 +131,29 @@ int LLN::GetNodeCount(int index)
 	return count;
 }
 
-void LLN::Remove()
+void DLLN::Remove()
 {
 	if (this == Head)					// this가 head면 전 노드를 굳이 알 필요가 없음
 	{
 		if (this->Next != nullptr)		// 다음 노드가 존재한다면
 		{
-		Head = this->Next;				// 머리를 다음 노드로 설정
+			Head = this->Next;				// 머리를 다음 노드로 설정
 		}
 		delete this;					// 삭제
 		return;
 	}
 
-	LLN* checker = Head;			// 삭제할 노드의 앞 노드를 찾기 위해서 체커를 생성
-									// 앞 노드의 next 를 삭제할 노드의 next 값을 넣기 위해서
-	while (1)
-	{
-		if (checker->Next == this)		// 머리부터 하나씩 체크했을 때 다음 노드가 해당 노드면
-		{
-			checker->Next = this->Next;	// 체커의 다음을 삭제될 노드의 다음으로 설정
-			delete this;				// 삭제
-			break;						// 반복문 빠져나옴
-		}
-		else							// 다음 노드가 삭제시킬 노드가 아니면
-		{
-			checker = checker->Next;	// checker가 한 칸 이동
-		}
-	}
+	this->Prev->Next = this->Next;
+	this->Next->Prev = this->Prev;
+
+	delete this;
+
 	--Length;							// 길이 -1
 }
 
-void LLN::RemoveAll() // 외부에서 호출되는 함수
+void DLLN::RemoveAll() // 외부에서 호출되는 함수
 {
-	Length = 0;	// length가 0 미만으로 떨어지지 못하도록 방지
+	Length = 0;
 
 	if (Head == nullptr)					// 리스트가 존재하지 않음
 	{
@@ -176,7 +172,7 @@ void LLN::RemoveAll() // 외부에서 호출되는 함수
 	Tail = nullptr;
 }
 
-void LLN::RemoveAll(const LLN* head)	// 내부에서 호출되는 함수 (재귀함수 용도)
+void DLLN::RemoveAll(const DLLN* head)	// 내부에서 호출되는 함수 (재귀함수 용도)
 {
 	if (head->Next != nullptr)			// 현재 노드의 다음이 비어있지 않으면
 	{
@@ -186,9 +182,9 @@ void LLN::RemoveAll(const LLN* head)	// 내부에서 호출되는 함수 (재귀함수 용도)
 	delete head;												// 현재 노드 삭제
 }
 
-void LLN_Print()
+void DLLN_Print()
 {
-	int length = LLN::GetLength();
+	int length = DLLN::GetLength();
 	if (length <= 0)
 	{
 		cout << "List is NULL" << endl;
@@ -196,6 +192,6 @@ void LLN_Print()
 	}
 	for (int i = 0; i < length; i++)
 	{
-		cout << "index [" << i << "] " << LLN::GetNode(i)->GetData() << endl;
+		cout << "index [" << i << "] " << DLLN::GetNode(i)->GetData() << endl;
 	}
 }
