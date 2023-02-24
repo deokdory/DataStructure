@@ -19,13 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DataStructure\01_LinkedList\DoubleLinkedList.cpp" />
+    <ClCompile Include="DataStructure\01A_DoubleLinkedList\DoubleLinkedList.cpp" />
     <ClCompile Include="DataStructure\01_LinkedList\LinkedList.cpp" />
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DataStructure\01_LinkedList\DoubleLinkedList.h" />
+    <ClInclude Include="DataStructure\01A_DoubleLinkedList\DoubleLinkedList.h" />
     <ClInclude Include="DataStructure\01_LinkedList\LinkedList.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="main.h" />
@@ -91,6 +91,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir);$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>

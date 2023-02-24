@@ -45,7 +45,8 @@ void DataStructure(int m)
 	{
 	case LINKED_LIST:
 	{
-		LinkedList();
+		//LinkedList();
+    DoubleLinkedList();
 		return;
 	}
 	case STACK:

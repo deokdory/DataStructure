@@ -1,7 +1,7 @@
 #pragma once
 
 #include "DataStructure/01_LinkedList/LinkedList.h"
-#include "DataStructure/01_LinkedList/DoubleLinkedList.h"
+#include "DataStructure/01A_DoubleLinkedList/DoubleLinkedList.h"
 
 
 void DataStructure(int m);

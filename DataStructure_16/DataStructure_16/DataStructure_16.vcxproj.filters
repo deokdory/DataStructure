@@ -24,7 +24,7 @@
     <ClCompile Include="DataStructure\01_LinkedList\LinkedList.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="DataStructure\01_LinkedList\DoubleLinkedList.cpp">
+    <ClCompile Include="DataStructure\01A_DoubleLinkedList\DoubleLinkedList.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,7 +38,7 @@
     <ClInclude Include="DataStructure\01_LinkedList\LinkedList.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="DataStructure\01_LinkedList\DoubleLinkedList.h">
+    <ClInclude Include="DataStructure\01A_DoubleLinkedList\DoubleLinkedList.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
