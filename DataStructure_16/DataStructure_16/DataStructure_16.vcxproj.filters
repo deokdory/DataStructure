@@ -27,6 +27,15 @@
     <ClCompile Include="DataStructure\01A_DoubleLinkedList\DoubleLinkedList.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="DataStructure\02_Stack\Stack.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DataStructure\03_Queue\Queue.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DataStructure\04_Tree\BinaryTree.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -39,6 +48,15 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="DataStructure\01A_DoubleLinkedList\DoubleLinkedList.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructure\02_Stack\Stack.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructure\03_Queue\Queue.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructure\04_Tree\BinaryTree.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

@@ -21,12 +21,18 @@
   <ItemGroup>
     <ClCompile Include="DataStructure\01A_DoubleLinkedList\DoubleLinkedList.cpp" />
     <ClCompile Include="DataStructure\01_LinkedList\LinkedList.cpp" />
+    <ClCompile Include="DataStructure\02_Stack\Stack.cpp" />
+    <ClCompile Include="DataStructure\03_Queue\Queue.cpp" />
+    <ClCompile Include="DataStructure\04_Tree\BinaryTree.cpp" />
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DataStructure\01A_DoubleLinkedList\DoubleLinkedList.h" />
     <ClInclude Include="DataStructure\01_LinkedList\LinkedList.h" />
+    <ClInclude Include="DataStructure\02_Stack\Stack.h" />
+    <ClInclude Include="DataStructure\03_Queue\Queue.h" />
+    <ClInclude Include="DataStructure\04_Tree\BinaryTree.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>

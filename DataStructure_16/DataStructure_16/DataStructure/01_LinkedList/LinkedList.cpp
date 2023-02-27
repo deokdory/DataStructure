@@ -19,9 +19,9 @@ void LinkedList() {
 	// 0 -> 1 -> 2 -> 3 -> 4
 
 	LLN_Print();
-	cout << endl;
+	std::cout << std::endl;
 
-	cout << "================================================" << endl;
+	std::cout << "================================================" << std::endl;
 
 	// 중간 값 삽입, 맨 앞에 값 삽입
 	LLN* new_node = LLN::Create(100);		// 새로운 노드 생성
@@ -32,29 +32,29 @@ void LinkedList() {
 
 	LLN_Print();
 
-	cout << endl;
+	std::cout << std::endl;
 
-	cout << "================================================" << endl;
+	std::cout << "================================================" << std::endl;
 
 	// 중간 값 제거
 	LLN::GetNode(3)->Remove();
 	LLN_Print();
 
-	cout << "================================================" << endl;
+	std::cout << "================================================" << std::endl;
 
 	// 특정 인덱스부터 끝까지의 리스트 길이
 	int count = LLN::GetNodeCount(1);
-	cout << "index[1] ~ Tail Length : " << count << endl;
+	std::cout << "index[1] ~ Tail Length : " << count << std::endl;
 
-	cout << "================================================" << endl;
+	std::cout << "================================================" << std::endl;
 
 	// 모든 값 제거
 	LLN::RemoveAll();
 	LLN_Print();
 
-	cout << "================================================" << endl;
+	std::cout << "================================================" << std::endl;
 
-	pause;
+	Pause;
 }
 
 LLN* LLN::Create(DataType data)
@@ -161,7 +161,7 @@ void LLN::RemoveAll() // 외부에서 호출되는 함수
 
 	if (Head == nullptr)					// 리스트가 존재하지 않음
 	{
-		cout << "List is already NULL" << endl;
+		std::cout << "List is already NULL" << std::endl;
 		return;
 	}
 
@@ -169,7 +169,7 @@ void LLN::RemoveAll() // 외부에서 호출되는 함수
 	{
 		RemoveAll(Head->Next);
 	}
-	cout << Head->data << "\tData Remove Completed!" << endl;
+	std::cout << Head->data << "\tData Remove Completed!" << std::endl;
 	delete Head;
 
 	Head = nullptr;
@@ -182,7 +182,7 @@ void LLN::RemoveAll(const LLN* head)	// 내부에서 호출되는 함수 (재귀함수 용도)
 	{
 		RemoveAll(head->Next);			// 재귀함수로 다음 노드를 현재 노드로 넣어서 다시 실행
 	}
-	cout << head->data << "\tData Remove Completed!" << endl;	// 다음 노드가 nullptr일 경우 실행됨
+	std::cout << head->data << "\tData Remove Completed!" << std::endl;	// 다음 노드가 nullptr일 경우 실행됨
 	delete head;												// 현재 노드 삭제
 }
 
@@ -191,11 +191,11 @@ void LLN_Print()
 	int length = LLN::GetLength();
 	if (length <= 0)
 	{
-		cout << "List is NULL" << endl;
+		std::cout << "List is NULL" << std::endl;
 		return;
 	}
 	for (int i = 0; i < length; i++)
 	{
-		cout << "index [" << i << "] " << LLN::GetNode(i)->GetData() << endl;
+		std::cout << "index [" << i << "] " << LLN::GetNode(i)->GetData() << std::endl;
 	}
 }

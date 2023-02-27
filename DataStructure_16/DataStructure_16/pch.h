@@ -2,22 +2,28 @@
 
 #include <iostream>
 #include <Windows.h>
+#include <string>
+#include <stdlib.h>
+#include <time.h>
 
 typedef int DataType;
 
-#define cout std::cout
-#define cin std::cin
-#define endl std::endl
-#define string std::string
+//#define std::cout std::cout
+//#define std::cin std::cin
+//#define std::endl std::endl
+//#define string std::string
 
-#define clear system("cls");
-#define pause system("pause");
-#define endll std::endl << std::endl;
+#define Clear system("cls");
+#define Pause system("Pause");
 
 enum DS // Data Structure
 {
 	LINKED_LIST = 1,
 	STACK,
+	QUEUE,
+	TREE,
+	HEAP,
+	GRAPH
 };
 
 enum AL // Algorithm

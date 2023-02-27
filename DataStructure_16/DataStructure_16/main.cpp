@@ -2,65 +2,77 @@
 #include "main.h"
 
 int main() {
+	srand(time(NULL));
+
 	while (true) {
+		Clear;
 
-		cout << "1. Data Structure\t2. Algorithm : " << endl;
+		std::cout << "1. Data Structure\t2. Algorithm : " << std::endl;
 		int n;
-		cin >> n;
+		std::cin >> n;
 
-		clear;
 
 		switch (n)
 		{
 		case 1:
-		{
-			cout << "1. Linked List\t2. Stack" << endl;
-
-			int m;
-			cin >> m;
-
-			DataStructure(m);
-		}
+			DataStructure();
+			continue;
 		case 2:
-		{
-			cout << "" << endl;
-
-			int m;
-			cin >> m;
-
-			Algorithm(m);
-
-		}
-		default: continue;
+			Algorithm();
+			continue;
+		default:
+			continue;
 		}
 
 		return 0;
 	}
 }
 
-void DataStructure(int m)
+void DataStructure()
 {
-	clear;
-	switch (m)
-	{
-	case LINKED_LIST:
-	{
-		//LinkedList();
-    DoubleLinkedList();
-		return;
-	}
-	case STACK:
-	{
+	Clear;
+	while (true) {
+		std::cout << "1. Linked List\t2. Stack\t3. Queue" << std::endl;
+		std::cout << "4. Tree\t\t5. Heap\t\t6. Graph" << std::endl;
 
-		return;
-	}
-	default: return;
+		int m;
+		std::cin >> m;
+
+		Clear;
+		switch (m)
+		{
+		case LINKED_LIST:
+		{
+			LinkedList();
+			//DoubleLinkedList();
+			return;
+		}
+		case STACK:
+		{
+			DoStack();
+			return;
+		}
+		case QUEUE:
+		{
+			DoQueue();
+			return;
+		}
+		case TREE:
+		{
+			DoBinaryTree();
+			return;
+		}
+		default: return;
+		}
 	}
 }
 
-void Algorithm(int m)
+void Algorithm()
 {
-	clear;
+	int m;
+	std::cin >> m;
+
+	Clear;
 	switch (m) {
 
 	default: return;
