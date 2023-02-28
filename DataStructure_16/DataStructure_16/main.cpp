@@ -2,7 +2,7 @@
 #include "main.h"
 
 int main() {
-	srand(time(NULL));
+	srand((unsigned)time(NULL));
 
 	while (true) {
 		Clear;
@@ -62,6 +62,15 @@ void DataStructure()
 			DoBinaryTree();
 			return;
 		}
+
+		case HEAP:
+			DoHeap();
+			return;
+
+		case GRAPH:
+			DoGraph();
+			return;
+
 		default: return;
 		}
 	}
