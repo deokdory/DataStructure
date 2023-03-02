@@ -28,5 +28,9 @@ enum DS // Data Structure
 
 enum AL // Algorithm
 {
-
+	SELECTION_SORT = 1,
+	INSERTION_SORT,
+	BUBBLE_SORT,
+	QUICK_SORT,
+	MERGE_SORT
 };

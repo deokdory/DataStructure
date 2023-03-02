@@ -8,5 +8,11 @@
 #include "DataStructure/05_Heap/Heap.h"
 #include "DataStructure/06_Graph/Graph.h"
 
+#include "Algorithm/01_SelectionSort/SelectionSort.h"
+#include "Algorithm/02_InsertionSort/InsertionSort.h"
+#include "Algorithm/03_BubbleSort/BubbleSort.h"
+#include "Algorithm/04_QuickSort/QuickSort.h"
+#include "Algorithm/05_MergeSlot/MergeSort.h"
+
 void DataStructure();
 void Algorithm();

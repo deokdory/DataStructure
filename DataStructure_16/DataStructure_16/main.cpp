@@ -78,12 +78,35 @@ void DataStructure()
 
 void Algorithm()
 {
-	int m;
-	std::cin >> m;
-
 	Clear;
-	switch (m) {
-
-	default: return;
+	while (true)
+	{
+		std::cout << "1. Selection Sort\t2. Insertion Sort\t3. Bubble Sort" << std::endl;
+		std::cout << "4. Quick Sort\t\t5. Marge Sort" << std::endl;
+		int n;
+		std::cin >> n;
+		switch (n) {
+		case SELECTION_SORT: {
+			DoSelectionSort();
+			return;
+		}
+		case INSERTION_SORT: {
+			DoInsertionSort();
+			return;
+		}
+		case BUBBLE_SORT: {
+			DoBubbleSort();
+			return;
+		}
+		case QUICK_SORT: {
+			DoQuickSort();
+			return;
+		}
+		case MERGE_SORT: {
+			DoMergeSort();
+			return;
+		}
+		default: return;
+		}
 	}
 }
