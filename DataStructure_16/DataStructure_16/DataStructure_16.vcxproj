@@ -24,6 +24,7 @@
     <ClCompile Include="Algorithm\03_BubbleSort\BubbleSort.cpp" />
     <ClCompile Include="Algorithm\04_QuickSort\QuickSort.cpp" />
     <ClCompile Include="Algorithm\05_MergeSlot\MergeSort.cpp" />
+    <ClCompile Include="Algorithm\Baekjoon_10989\Baekjoon_10989.cpp" />
     <ClCompile Include="DataStructure\01A_DoubleLinkedList\DoubleLinkedList.cpp" />
     <ClCompile Include="DataStructure\01_LinkedList\LinkedList.cpp" />
     <ClCompile Include="DataStructure\02_Stack\Stack.cpp" />
