@@ -138,7 +138,7 @@ void StandardTemplateLibrary()
 			DoSet();
 			return;
 		case PAIR:
-			//DoPair();
+			DoPair();
 			return;
 		default:
 			return;
