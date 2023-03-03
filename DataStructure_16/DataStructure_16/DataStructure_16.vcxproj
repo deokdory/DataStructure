@@ -24,7 +24,7 @@
     <ClCompile Include="Algorithm\03_BubbleSort\BubbleSort.cpp" />
     <ClCompile Include="Algorithm\04_QuickSort\QuickSort.cpp" />
     <ClCompile Include="Algorithm\05_MergeSlot\MergeSort.cpp" />
-    <ClCompile Include="Algorithm\Baekjoon_10989\Baekjoon_10989.cpp" />
+    <ClCompile Include="Algorithm\06_BinarySearch\BinarySearch.cpp" />
     <ClCompile Include="DataStructure\01A_DoubleLinkedList\DoubleLinkedList.cpp" />
     <ClCompile Include="DataStructure\01_LinkedList\LinkedList.cpp" />
     <ClCompile Include="DataStructure\02_Stack\Stack.cpp" />
@@ -34,6 +34,10 @@
     <ClCompile Include="DataStructure\06_Graph\Graph.cpp" />
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="STL\01_Vector\Vector.cpp" />
+    <ClCompile Include="STL\02_Map\Map.cpp" />
+    <ClCompile Include="STL\03_Set\Set.cpp" />
+    <ClCompile Include="STL\04_Pair\Pair.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Algorithm\01_SelectionSort\SelectionSort.h" />
@@ -41,6 +45,7 @@
     <ClInclude Include="Algorithm\03_BubbleSort\BubbleSort.h" />
     <ClInclude Include="Algorithm\04_QuickSort\QuickSort.h" />
     <ClInclude Include="Algorithm\05_MergeSlot\MergeSort.h" />
+    <ClInclude Include="Algorithm\06_BinarySearch\BinarySearch.h" />
     <ClInclude Include="DataStructure\01A_DoubleLinkedList\DoubleLinkedList.h" />
     <ClInclude Include="DataStructure\01_LinkedList\LinkedList.h" />
     <ClInclude Include="DataStructure\02_Stack\Stack.h" />
@@ -50,6 +55,10 @@
     <ClInclude Include="DataStructure\06_Graph\Graph.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="STL\01_Vector\Vector.h" />
+    <ClInclude Include="STL\02_Map\Map.h" />
+    <ClInclude Include="STL\03_Set\Set.h" />
+    <ClInclude Include="STL\04_Pair\Pair.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

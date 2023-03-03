@@ -7,7 +7,7 @@ int main() {
 	while (true) {
 		Clear;
 
-		std::cout << "1. Data Structure\t2. Algorithm : " << std::endl;
+		std::cout << "1. Data Structure\t2. Algorithm\t3. STL : " << std::endl;
 		int n;
 		std::cin >> n;
 
@@ -19,6 +19,9 @@ int main() {
 			continue;
 		case 2:
 			Algorithm();
+			continue;
+		case 3:
+			StandardTemplateLibrary();
 			continue;
 		default:
 			continue;
@@ -106,7 +109,39 @@ void Algorithm()
 			DoMergeSort();
 			return;
 		}
+		case BINARY_SEARCH:
+			DoBinarySearch();
+			return;
 		default: return;
+		}
+	}
+}
+
+void StandardTemplateLibrary()
+{
+	while (true)
+	{
+		std::cout << "1. Vector\t2. Map\t3. Set\t\t4. Pair : ";
+
+		int n;
+		std::cin >> n;
+
+		Clear;
+		switch (n) {
+		case VECTOR:
+			DoVector();
+			return;
+		case MAP:
+			DoMap();
+			return;
+		case SET:
+			DoSet();
+			return;
+		case PAIR:
+			//DoPair();
+			return;
+		default:
+			return;
 		}
 	}
 }

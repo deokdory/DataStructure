@@ -57,7 +57,19 @@
     <ClCompile Include="Algorithm\05_MergeSlot\MergeSort.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Algorithm\Baekjoon_10989\Baekjoon_10989.cpp">
+    <ClCompile Include="Algorithm\06_BinarySearch\BinarySearch.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="STL\01_Vector\Vector.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="STL\02_Map\Map.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="STL\03_Set\Set.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="STL\04_Pair\Pair.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -102,6 +114,21 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Algorithm\05_MergeSlot\MergeSort.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\06_BinarySearch\BinarySearch.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="STL\01_Vector\Vector.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="STL\02_Map\Map.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="STL\03_Set\Set.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="STL\04_Pair\Pair.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

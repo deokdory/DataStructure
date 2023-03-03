@@ -6,6 +6,12 @@
 #include <stdlib.h>
 #include <time.h>
 
+// STL
+#include <vector>
+#include <map>
+#include <set>
+#include <utility>
+
 typedef int DataType;
 
 //#define std::cout std::cout
@@ -32,5 +38,14 @@ enum AL // Algorithm
 	INSERTION_SORT,
 	BUBBLE_SORT,
 	QUICK_SORT,
-	MERGE_SORT
+	MERGE_SORT,
+	BINARY_SEARCH,
+};
+
+enum STL
+{
+	VECTOR = 1,
+	MAP,
+	SET,
+	PAIR
 };

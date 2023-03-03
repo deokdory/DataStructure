@@ -13,6 +13,13 @@
 #include "Algorithm/03_BubbleSort/BubbleSort.h"
 #include "Algorithm/04_QuickSort/QuickSort.h"
 #include "Algorithm/05_MergeSlot/MergeSort.h"
+#include "Algorithm/06_BinarySearch/BinarySearch.h"
+
+#include "STL/01_Vector/Vector.h"
+#include "STL/02_Map/Map.h"
+#include "STL/03_Set/Set.h"
+#include "STL/04_Pair/Pair.h"
 
 void DataStructure();
 void Algorithm();
+void StandardTemplateLibrary();
